@@ -1,0 +1,20 @@
+server:
+    port: 9000
+    servlet:
+      contextPath: /UserApp
+
+security:
+  oauth2:
+    client:
+      client-secret: spring-security-oauth2-read-write-client-password-1234
+      client-id: user-app
+    resource:
+      token-info-uri: http://localhost:8081/auth/oauth/check_token
+      jwt:
+        key-uri: http://localhost:8081/auth/oauth/token_key
+        #key-value: |
+         # -----BEGIN PUBLIC KEY-----
+         # MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtYvuyOe5WH0v2KlgnxzeAQ8CAaQF71Bgzil7CHgzPWA5dzmVL6hP3tWePaQg0rZ6WHR90EnFsB4R8OqsD7JU3IN83hIWVnjQz/fo1ygQzWP5h8HjssTWVDMi8VdbZeeqdRT2/YTs3l3Hm1adWqhKCV0OnWLD93DvjAvSfu0VBCPzIdyJD66T0YePT/Ud9+/dkMm2GqW/hh/8Y1AuQxhjLM2SApVhbJo5GEbe1apzJnFn1FMFSarWWxAZ6bG/CXtXdn9rM0T299aW6NXwjwiSfedCutkqPJAc9isc6kb7JNl6lHm/rYbpE0Ao/2jYrsyvz2J1R12TEtyvrloqg6DoKwIDAQAB
+          #-----END PUBLIC KEY-----
+
+   
